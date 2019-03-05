@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="edu.sjsu.izzymoriguchi.myapplication.MainActivity"
+    android:id="@+id/relative_layout">
+
+
+    <ImageView
+        android:id="@+id/banner"
+        android:layout_width="wrap_content"
+        android:layout_height="192dp"
+        android:layout_marginBottom="13dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/logo"
+        android:onClick="showPopupInfo"/>
+
+    <GridLayout
+        android:id="@+id/icon_grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/banner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:columnCount="2"
+        android:orientation="horizontal"
+        android:rowCount="2">
+
+        <RelativeLayout
+            android:id="@+id/meal_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:onClick="goToMealsActivity">
+
+            <ImageView
+                android:id="@+id/meal_icon"
+                android:layout_width="137dp"
+                android:layout_height="128dp"
+                app:srcCompat="@drawable/meal3" />
+
+            <TextView
+                android:id="@+id/meal_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/meal_icon"
+                android:layout_centerHorizontal="true"
+                android:text="Meals" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/recipe_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:onClick="goToRecipesActivity">
+
+            <ImageView
+                android:id="@+id/recipe_icon"
+                android:layout_width="137dp"
+                android:layout_height="128dp"
+                app:srcCompat="@drawable/recipe1" />
+
+            <TextView
+                android:id="@+id/recipe_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recipe_icon"
+                android:layout_centerHorizontal="true"
+                android:text="Recipes" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/grocery_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:onClick="goToGroceriesActivity">
+
+            <ImageView
+                android:id="@+id/grocery_icon"
+                android:layout_width="137dp"
+                android:layout_height="128dp"
+                app:srcCompat="@drawable/grocery1" />
+
+            <TextView
+                android:id="@+id/grocery_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/grocery_icon"
+                android:layout_centerHorizontal="true"
+                android:text="Groceries" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/newdish_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:onClick="goToNewDishActivity">
+
+            <ImageView
+                android:id="@+id/newdish_icon"
+                android:layout_width="137dp"
+                android:layout_height="128dp"
+                app:srcCompat="@drawable/newdish2" />
+
+            <TextView
+                android:id="@+id/newdish_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/newdish_icon"
+                android:layout_centerHorizontal="true"
+                android:text="New Dish" />
+        </RelativeLayout>
+    </GridLayout>
+</RelativeLayout>
